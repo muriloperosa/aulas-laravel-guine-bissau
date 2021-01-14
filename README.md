@@ -10,9 +10,9 @@ Este repositório contém o código desenvolvido durante as aulas de Laravel 8 c
 
 
 ## Instalação do Projeto
-1- Copiar o arquivo .env.example e renomeá-lo para .env
-2- Alterar os dados de acesso ao banco de dados para os valores de sua máquina local no novo arquivo .env
-3- Acessar o diretório do projeto pelo prompt de comando e executar os seguintes comandos (de forma sequencial):
+1- Copiar o arquivo .env.example e renomeá-lo para .env <br/>
+2- Alterar os dados de acesso ao banco de dados para os valores de sua máquina local no novo arquivo .env <br/>
+3- Acessar o diretório do projeto pelo prompt de comando e executar os seguintes comandos (de forma sequencial): <br/> <br/>
 
 ``` bash
 # install dependencies
@@ -28,7 +28,7 @@ npm run dev
 php artisan key:generate
 ```
 ## Rodar o Projeto
-1- Acessar o diretório do projeto pelo prompt de comando e executar o seguintes comando:
+1- Acessar o diretório do projeto pelo prompt de comando e executar o seguinte comando:
 
 ``` bash
 # initiate serve
@@ -37,4 +37,5 @@ php artisan serve
 
 ## Aulas em Vídeo
 
-- [Aula 1](https://youtu.be/inBTUQQrduo) - Introdução, Conceitos Básicos do Laravel e Criação do Projeto.
+- [PDF - Laravel](https://drive.google.com/file/d/1g6L30yBsNr53aWrvXxuK_JOnin1fK5PN/view?usp=sharing) - Conceitos Básicos do Laravel.<br/>
+- [Vídeo - Aula 1](https://youtu.be/inBTUQQrduo) - Introdução, Conceitos Básicos do Laravel e Criação do Projeto.
