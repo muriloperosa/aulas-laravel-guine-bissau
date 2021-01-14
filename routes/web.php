@@ -29,8 +29,11 @@ Route::middleware(['auth'])->group(function(){
     // Group: Teams
     Route::prefix('teams')->group(function(){
         Route::get('', [TeamsController::class, 'index'])->name('teams-index');
-        Route::get('/create', [TeamsController::class, 'create'])->name('teams-create');
+        Route::any('/create', [TeamsController::class, 'create'])->name('teams-create');
+        Route::post('/store', [TeamsController::class, 'store'])->name('teams-store');
         Route::get('/{id}/edit', [TeamsController::class, 'edit'])->where('id', '[0-9]+')->name('teams-edit');
+        Route::put('/{id}/update', [TeamsController::class, 'update'])->where('id', '[0-9]+')->name('teams-update');
+        Route::delete('/{id}', [TeamsController::class, 'destroy'])->where('id', '[0-9]+')->name('teams-destroy');
     });
 
 });
