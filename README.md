@@ -9,6 +9,15 @@ Este repositório contém o código desenvolvido durante as aulas de Laravel 8 c
 - [Bootstrap 4.5](https://getbootstrap.com/docs/4.5/getting-started/introduction/)
 
 
+## Download do Projeto 
+1- Através do prompt de comando, navegue até o diretório onde deseja salvar o projeto. <br/>
+2- Execute o seguinte comando: <br/><br/>
+``` bash
+# download project
+git clone https://github.com/MuriloPerosa/aulas-laravel-guine-bissau.git
+```
+
+
 ## Instalação do Projeto
 1- Copiar o arquivo .env.example e renomeá-lo para .env <br/>
 2- Alterar os dados de acesso ao banco de dados para os valores de sua máquina local no novo arquivo .env <br/>
