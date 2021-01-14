@@ -35,7 +35,7 @@ php artisan key:generate
 php artisan serve
 ```
 
-## Aulas em Vídeo
+## Material
 
 - [PDF - Laravel](https://drive.google.com/file/d/1g6L30yBsNr53aWrvXxuK_JOnin1fK5PN/view?usp=sharing) - Conceitos Básicos do Laravel.<br/>
 - [Vídeo - Aula 1](https://youtu.be/inBTUQQrduo) - Introdução, Conceitos Básicos do Laravel e Criação do Projeto.
