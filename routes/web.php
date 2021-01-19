@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\PlayersController;
 use App\Http\Controllers\TeamsController;
 use Illuminate\Support\Facades\Route;
 
@@ -34,6 +35,16 @@ Route::middleware(['auth'])->group(function(){
         Route::get('/{id}/edit', [TeamsController::class, 'edit'])->where('id', '[0-9]+')->name('teams-edit');
         Route::put('/{id}/update', [TeamsController::class, 'update'])->where('id', '[0-9]+')->name('teams-update');
         Route::delete('/{id}', [TeamsController::class, 'destroy'])->where('id', '[0-9]+')->name('teams-destroy');
+    });
+
+    // Group: Players
+    Route::prefix('players')->group(function(){
+        Route::get('', [PlayersController::class, 'index'])->name('players-index');
+        Route::any('/create', [PlayersController::class, 'create'])->name('players-create');
+        Route::post('/store', [PlayersController::class, 'store'])->name('players-store');
+        Route::get('/{id}/edit', [PlayersController::class, 'edit'])->where('id', '[0-9]+')->name('players-edit');
+        Route::put('/{id}/update', [PlayersController::class, 'update'])->where('id', '[0-9]+')->name('players-update');
+        Route::delete('/{id}', [PlayersController::class, 'destroy'])->where('id', '[0-9]+')->name('players-destroy');
     });
 
 });

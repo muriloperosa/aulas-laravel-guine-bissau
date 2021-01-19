@@ -4,10 +4,10 @@
     <div class="container">
         <div class="row">
             <div class="col-sm-12 col-md-6">
-                <h1>Times</h1>
+                <h1>Jogadores</h1>
             </div>
             <div class="col-sm-12 col-md-6">
-                <a href="{{ route('teams-create') }}" class="btn btn-md btn-success float-right">Adicionar</a>
+                <a href="{{ route('players-create') }}" class="btn btn-md btn-success float-right">Adicionar</a>
             </div>
         </div>
 
@@ -19,23 +19,27 @@
                             <tr>
                                 <th>ID</th>
                                 <th>Nome</th>
+                                <th>Posição</th>
+                                <th>Número</th>
                                 <th>País</th>
-                                <th>Ano de Fundação</th>
-                                <th>Número de Jogadores</th>
+                                <th>Data Nascimento</th>
+                                <th>Time</th>
                                 <th>...</th>
                             </tr>
                         </thead>
                         <tbody>
-                            @foreach($teams as $team)
+                            @foreach($players as $player)
                                 <tr>
-                                    <th>{{ $team->id }}</th>
-                                    <td>{{ $team->name }}</td>
-                                    <td>{{ $team->country }}</td>
-                                    <td>{{ $team->foundation_year }}</td>
-                                    <td>{{ count($team->players) }}</td>
+                                    <th>{{ $player->id }}</th>
+                                    <td>{{ $player->name }}</td>
+                                    <td>{{ $player->position }}</td>
+                                    <td>{{ $player->number }}</td>
+                                    <td>{{ $player->country }}</td>
+                                    <td>{{ $player->born_at->format('Y-m-d') }}</td>
+                                    <td>{{ $player->team->name }}</td>
                                     <td class="d-flex">
-                                        <a href="{{ route('teams-edit', ['id' => $team->id]) }}" class="btn btn-sm btn-primary mr-1">Editar</a>
-                                        <form method="POST" action="{{ route('teams-destroy', ['id' => $team->id ]) }}">
+                                        <a href="{{ route('players-edit', ['id' => $player->id]) }}" class="btn btn-sm btn-primary mr-1">Editar</a>
+                                        <form method="POST" action="{{ route('players-destroy', ['id' => $player->id ]) }}">
                                             @csrf
                                             @method('DELETE')
                                             <button type="submit" class="btn btn-sm btn-danger">Deletar</button>

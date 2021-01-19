@@ -53,6 +53,9 @@
                             @endif
                         @else
                             <li class="nav-item">
+                                <a class="nav-link" href="{{ route('players-index') }}">Jogadores</a>
+                            </li>
+                            <li class="nav-item">
                                 <a class="nav-link" href="{{ route('teams-index') }}">Times</a>
                             </li>
                             <li class="nav-item dropdown">
