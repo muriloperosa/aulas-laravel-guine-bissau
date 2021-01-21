@@ -10,10 +10,29 @@ use App\Http\Requests\UpdatePlayersRequest;
 
 class PlayersController extends Controller
 {
-    public function index()
+    public function index(Request $request)
     {
-        $players = Player::all();
-        return view('players.index', ['players' => $players]);
+        // Buscar todos os jogadores
+        // $players = Player::all();
+
+        $q = $request->query('q', null);
+
+        if ($q)
+        {
+            // pesquisar
+            $players = Player::where('name', 'LIKE', "%".$q."%")
+                ->orWhere('position', 'LIKE', "%".$q."%")
+                ->orWhere('country', 'LIKE', "%".$q."%")
+                ->orderBy('id', 'DESC')
+                ->paginate(10)
+                ->withQueryString();
+        }
+        else
+        {
+            $players = Player::orderBy('id', 'DESC')->paginate(10);
+        }
+        
+        return view('players.index', ['players' => $players, 'q' => $q]);
     }
 
     public function create()

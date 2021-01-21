@@ -10,6 +10,23 @@
                 <a href="{{ route('players-create') }}" class="btn btn-md btn-success float-right">Adicionar</a>
             </div>
         </div>
+        
+        <div class="row">
+            <div class="col-sm-0 col-md-6"></div>
+            <div class="col-sm-12 col-md-6">
+                <form>
+                    <div class="input-group mb-3 mt-2">
+                        <input type="text" name="q" class="form-control" placeholder="Pesquisar..." value="{{ $q }}"/>
+                        <div class="input-group-append">
+                            <button class="btn btn-primary" type="submit">
+                                Pesquisar
+                            </button>
+                            <a href="{{ route('players-index') }}" class="btn btn-danger">Limpar</a>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
 
         <div class="row bg-white pt-3 mt-2">
             <div class="col-sm-12">
@@ -49,6 +66,10 @@
                             @endforeach
                         </tbody>
                     </table>
+                    <hr/>
+                    <div class="float-right">
+                        {{ $players->links() }}
+                    </div>
                 </div>
             </div>
         </div>
