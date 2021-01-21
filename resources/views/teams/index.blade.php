@@ -10,7 +10,24 @@
                 <a href="{{ route('teams-create') }}" class="btn btn-md btn-success float-right">Adicionar</a>
             </div>
         </div>
-
+        
+        <div class="row">
+            <div class="col-sm-0  col-md-6"></div>
+            <div class="col-sm-12 col-md-6">
+                <form method="GET">
+                    <div class="input-group mb-3 mt-2">
+                        <input type="text" class="form-control" placeholder="Pesquisar..." name="q" value="{{$q}}"/>
+                        <div class="input-group-append">
+                            <button class="btn btn-primary" type="submit">
+                                Pesquisar
+                            </button>
+                            <a href="{{ route('teams-index') }}" class="btn btn-danger">Limpar</a>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+        
         <div class="row bg-white pt-3 mt-2">
             <div class="col-sm-12">
                 <div class="table-responsive">
@@ -45,6 +62,10 @@
                             @endforeach
                         </tbody>
                     </table>
+                    <hr/>
+                    <div class="float-right">
+                        {{ $teams->links() }}
+                    </div>
                 </div>
             </div>
         </div>
