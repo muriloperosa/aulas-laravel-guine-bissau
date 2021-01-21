@@ -49,3 +49,4 @@ php artisan serve
 - [PDF - Laravel](https://drive.google.com/file/d/1g6L30yBsNr53aWrvXxuK_JOnin1fK5PN/view?usp=sharing) - Conceitos Básicos do Laravel.<br/>
 - [Vídeo - Aula 1](https://youtu.be/inBTUQQrduo) - Introdução, Conceitos Básicos do Laravel e Criação do Projeto.
 - [Vídeo - Aula 2](https://youtu.be/DHjC0ThuIMs) - Desenvolvimento do CRUD de Times.
+- [Vídeo - Aula 3](https://youtu.be/m9pl22xPgzw) - Desenvolvimento do CRUD de Jogadores.
