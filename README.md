@@ -50,3 +50,5 @@ php artisan serve
 - [Vídeo - Aula 1](https://youtu.be/inBTUQQrduo) - Introdução, Conceitos Básicos do Laravel e Criação do Projeto.
 - [Vídeo - Aula 2](https://youtu.be/DHjC0ThuIMs) - Desenvolvimento do CRUD de Times.
 - [Vídeo - Aula 3](https://youtu.be/m9pl22xPgzw) - Desenvolvimento do CRUD de Jogadores.
+- [Vídeo - Aula 4](https://youtu.be/CI-FgXlF_yQ) - Pesquisa e paginação.
+
